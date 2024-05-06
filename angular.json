@@ -35,6 +35,26 @@
           }
         }
       }
+    },
+    "@ropabajo/core": {
+      "root": "projects/ng-utils",
+      "sourceRoot": "projects/ng-utils/src",
+      "projectType": "library",
+      "prefix": "sun",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/ng-utils/tsconfig.lib.json",
+            "project": "projects/ng-utils/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ng-utils/tsconfig.lib.prod.json"
+            }
+          }
+        }
+      }
     }
   },
   "cli": {
