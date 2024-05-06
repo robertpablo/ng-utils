@@ -9,17 +9,15 @@
     "tslib": "^2.3.0"
   },
   "sideEffects": false,
-  "module": "fesm2022/ng-utils.mjs",
+  "module": "esm2022/ng-utils.mjs",
   "typings": "index.d.ts",
   "exports": {
-    "./package.json": {
-      "default": "./package.json"
-    },
     ".": {
-      "types": "./index.d.ts",
-      "esm2022": "./esm2022/ng-utils.mjs",
-      "esm": "./esm2022/ng-utils.mjs",
-      "default": "./fesm2022/ng-utils.mjs"
-    }
-  }
+      "import": "./esm2022/ng-utils.mjs",
+      "require": "./fesm2022/ng-utils.mjs",
+      "types": "./index.d.ts"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "fesm2022/ng-utils.mjs"
 }

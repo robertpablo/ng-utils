@@ -3,5 +3,6 @@
   "dest": "../../dist/ng-utils",
   "lib": {
     "entryFile": "src/public-api.ts"
-  }
+  },
+  "keepLifecycleScripts": true
 }
