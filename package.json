@@ -4,8 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
-    "build-lib": "ng build @ropabajo/core --configuration production",
+    "build": "ng build ng-utils --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
