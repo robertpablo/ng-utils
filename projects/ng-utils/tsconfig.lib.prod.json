@@ -2,9 +2,13 @@
 {
   "extends": "./tsconfig.lib.json",
   "compilerOptions": {
-    "declarationMap": false
+    "declarationMap": false,
+    "module": "esnext",
+    "target": "es2022",
   },
   "angularCompilerOptions": {
-    "compilationMode": "partial"
+    "compilationMode": "partial",
+    "flatModuleOutFile": "my-ui-lib.js",
+    "flatModuleId": "my-ui-lib"
   }
 }

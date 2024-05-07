@@ -1,6 +1,7 @@
 {
   "name": "ng-utils",
-  "version": "0.0.1",
+  "version": "0.0.2",
+  "type": "module",
   "peerDependencies": {
     "@angular/common": "^17.3.0",
     "@angular/core": "^17.3.0"
@@ -8,5 +9,21 @@
   "dependencies": {
     "tslib": "^2.3.0"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "module": "./fesm2022/core.mjs",
+  "typings": "./core.d.ts",
+  "exports": {
+    "./schematics/*": {
+      "default": "./schematics/*.js"
+    },
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./core.d.ts",
+      "esm": "./esm2022/core.mjs",
+      "esm2022": "./esm2022/core.mjs",
+      "default": "./fesm2022/core.mjs"
+    }
+  }
 }
