@@ -1,6 +1,6 @@
 {
-  "name": "ng-utils",
-  "version": "0.0.2",
+  "name": "@ropabajo/core",
+  "version": "0.0.3",
   "type": "module",
   "peerDependencies": {
     "@angular/common": "^17.3.0",
@@ -10,15 +10,22 @@
     "tslib": "^2.3.0"
   },
   "sideEffects": false,
-  "module": "esm2022/ng-utils.mjs",
+  "module": "esm2022/ropabajo-core.mjs",
   "typings": "index.d.ts",
   "exports": {
     ".": {
-      "import": "./esm2022/ng-utils.mjs",
-      "require": "./fesm2022/ng-utils.mjs",
+      "import": "./esm2022/ropabajo-core.mjs",
+      "require": "./fesm2022/ropabajo-core.mjs",
       "types": "./index.d.ts"
     },
     "./package.json": "./package.json"
   },
-  "main": "fesm2022/ng-utils.mjs"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robertpablo/ng-utils.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "main": "fesm2022/ropabajo-core.mjs"
 }

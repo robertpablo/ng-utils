@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build ng-utils --configuration production && node post-build.js",
+    "build": "ng build @ropabajo/core --configuration production && node post-build.js",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -23,6 +23,7 @@
     "@ngxs/logger-plugin": "^3.8.2",
     "@ngxs/store": "^3.8.2",
     "bootstrap": "^5.3.3",
+    "dotenv": "^16.4.5",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"

@@ -1,3 +1,9 @@
+# build dist
+`npm run build`  en la raiz del proyecto
+
+# publish dist
+`npm publish`  en la carpeta dist\ng-utils
+
 # NgUtils
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.3.

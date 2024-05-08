@@ -220,4 +220,4 @@ AppState = __decorate([
  */
 
 export { AppState, BytesFormatPipe, CoreModule, PageHeaderComponent, RpbjFilter, RpbjPageWrapper, formatBytesString };
-//# sourceMappingURL=ng-utils.mjs.map
+//# sourceMappingURL=ropabajo-core.mjs.map

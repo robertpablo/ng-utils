@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ng-utils": {
+    "@ropabajo/core": {
       "root": "projects/ng-utils",
       "sourceRoot": "projects/ng-utils/src",
       "projectType": "library",

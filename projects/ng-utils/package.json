@@ -1,6 +1,6 @@
 {
-  "name": "ng-utils",
-  "version": "0.0.2",
+  "name": "@ropabajo/core",
+  "version": "0.0.3",
   "type": "module",
   "peerDependencies": {
     "@angular/common": "^17.3.0",
@@ -25,5 +25,12 @@
       "esm2022": "./esm2022/core.mjs",
       "default": "./fesm2022/core.mjs"
     }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robertpablo/ng-utils.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   }
 }
