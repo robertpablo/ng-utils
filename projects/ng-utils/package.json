@@ -1,6 +1,6 @@
 {
   "name": "@ropabajo/core",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "type": "module",
   "peerDependencies": {
     "@angular/common": "^17.3.0",
@@ -10,22 +10,6 @@
     "tslib": "^2.3.0"
   },
   "sideEffects": false,
-  "module": "./fesm2022/core.mjs",
-  "typings": "./core.d.ts",
-  "exports": {
-    "./schematics/*": {
-      "default": "./schematics/*.js"
-    },
-    "./package.json": {
-      "default": "./package.json"
-    },
-    ".": {
-      "types": "./core.d.ts",
-      "esm": "./esm2022/core.mjs",
-      "esm2022": "./esm2022/core.mjs",
-      "default": "./fesm2022/core.mjs"
-    }
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/robertpablo/ng-utils.git"
