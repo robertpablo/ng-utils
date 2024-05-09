@@ -7,8 +7,6 @@
     "declarationMap": true,
     "inlineSources": true,
     "types": [],
-    "rootDir": "./",
   },
   "exclude": ["**/*.spec.ts"],
-  "include": ["**/lib/**/*.ts"]
 }
