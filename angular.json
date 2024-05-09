@@ -36,6 +36,40 @@
           }
         }
       }
+    },
+    "@ropabajo/shared": {
+      "projectType": "library",
+      "root": "projects/ng-shared",
+      "sourceRoot": "projects/ng-shared/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ng-shared/ng-package.json",
+            "tsConfig": "projects/ng-shared/tsconfig.lib.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ng-shared/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ng-shared/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/ng-shared/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
     }
   },
   "cli": {

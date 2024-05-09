@@ -4,7 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build @ropabajo/core --configuration production && node post-build.js",
+    "build:core": "ng build @ropabajo/core --configuration production && node ./scripts/post-build-core.js",
+    "build:shared": "ng build @ropabajo/shared --configuration production && node ./scripts/post-build-shared.js",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
