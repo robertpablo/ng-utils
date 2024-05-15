@@ -11,8 +11,8 @@
     "noFallthroughCasesInSwitch": true,
     "skipLibCheck": true,
     "paths": {
-      "ng-utils": [
-        "./dist/ng-utils"
+      "ng-core": [
+        "./dist/ng-core"
       ],
       "ng-shared": [
         "./dist/ng-shared"
