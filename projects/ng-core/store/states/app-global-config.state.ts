@@ -1,18 +1,22 @@
 import { HttpClient } from '@angular/common/http';
-import { Inject, Injectable } from '@angular/core';
-import { Action, StateContext, Store } from '@ngxs/store';
+import { Inject, Injectable, Optional } from '@angular/core';
+import { Action, State, StateContext, Store } from '@ngxs/store';
 import { AppStoreActions } from '../actions';
-import { IAppGlobalConfig, IServerConfig } from '../interfaces';
+import { IAppGlobalConfig, IServerConfig, initialState } from '../interfaces';
 import { catchError, tap, throwError } from 'rxjs';
 import { CoreConfig } from '../interfaces/core-config';
-import { CORE_CONFIG } from '../tokens';
+import { APP_STATE_TOKEN, CORE_CONFIG } from '../tokens';
 
+@State({
+  name: APP_STATE_TOKEN.GLOBAL_CONFIG,
+  defaults: initialState.globalConfig,
+})
 @Injectable()
 export class AppGlobalConfigState {
   constructor(
     private store: Store,
     private http: HttpClient,
-    @Inject(CORE_CONFIG) private config: CoreConfig
+    @Optional() @Inject(CORE_CONFIG) private config?: CoreConfig
   ) {}
 
   @Action(AppStoreActions.GlobalConfig.SetLoading)
@@ -25,6 +29,11 @@ export class AppGlobalConfigState {
 
   @Action(AppStoreActions.GlobalConfig.GetGlobalConfig)
   GetGlobalConfig({ getState, setState }: StateContext<IAppGlobalConfig>) {
+    if (!this.config) {
+      console.error('CORE_CONFIG is not provided');
+      return;
+    }
+
     setState({ ...getState(), isLoading: true, error: false });
 
     return this.http

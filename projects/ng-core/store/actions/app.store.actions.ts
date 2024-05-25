@@ -1,3 +1,5 @@
+import { CoreConfig } from "../interfaces";
+
 export namespace AppStoreActions {
   export namespace GlobalConfig {
     export class SetLoading {
@@ -8,6 +10,11 @@ export namespace AppStoreActions {
     export class GetGlobalConfig {
       static readonly type = '[RPBJ-STORE - GLOBAL CONFIG] GetGlobalConfig';
       constructor() {}
+    }
+
+    export class SetGlobalConfig {
+      static readonly type = '[RPBJ-STORE - GLOBAL CONFIG] SetGlobalConfig';
+      constructor(public payload: CoreConfig) {}
     }
   }
 }
