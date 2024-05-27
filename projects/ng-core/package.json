@@ -1,6 +1,6 @@
 {
   "name": "@ropabajo/core",
-  "version": "0.1.4",
+  "version": "0.1.7",
   "type": "module",
   "peerDependencies": {
     "@angular/common": "^17.3.0",
