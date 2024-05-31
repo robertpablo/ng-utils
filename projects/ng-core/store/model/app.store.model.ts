@@ -1,4 +1,4 @@
-import { IAppGlobalConfig } from './app.store.interface';
+import { IAppGlobalConfig } from 'projects/ng-core/interfaces';
 
 export const initialState: { globalConfig: IAppGlobalConfig } = {
   globalConfig: {

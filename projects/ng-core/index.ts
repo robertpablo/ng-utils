@@ -1,4 +1,7 @@
-export * from './core.module';
-export * from './store/index';
+export * from './event-bus/index';
+export * from './interfaces/index';
 export * from './services/index';
-export * from './web-components';
+export * from './store/index';
+export * from './web-components/index';
+
+export * from './core.module';

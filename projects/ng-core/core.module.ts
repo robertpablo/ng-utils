@@ -7,13 +7,8 @@ import {
 } from '@angular/core';
 import { LoggerModule, NgxLoggerLevel, NGXLogger } from 'ngx-logger';
 import { Store } from '@ngxs/store';
-import {
-  AppStoreActions,
-  APP_STATE_TOKEN,
-  CoreModuleOptions,
-  CoreConfig,
-  CORE_CONFIG,
-} from './store';
+import { CoreConfig, CoreModuleOptions } from './interfaces';
+import { APP_STATE_TOKEN, AppStoreActions, CORE_CONFIG } from './store';
 
 const appInitializerFn = (
   store: Store,

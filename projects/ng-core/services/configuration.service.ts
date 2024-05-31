@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import { APP_STATE_TOKEN, IServerConfig } from '../store';
 import { Store } from '@ngxs/store';
+import { IServerConfig } from '../interfaces';
+import { APP_STATE_TOKEN } from '../store';
 
 @Injectable({
   providedIn: 'root',

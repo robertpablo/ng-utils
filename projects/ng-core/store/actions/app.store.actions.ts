@@ -1,4 +1,4 @@
-import { CoreConfig } from "../interfaces";
+import { CoreConfig } from 'projects/ng-core/interfaces';
 
 export namespace AppStoreActions {
   export namespace GlobalConfig {

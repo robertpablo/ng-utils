@@ -1,7 +1,6 @@
 import { StateToken } from '@ngxs/store';
-import { IAppGlobalConfig } from '../interfaces';
 import { InjectionToken } from '@angular/core';
-import { CoreConfig } from '../interfaces/core-config';
+import { CoreConfig, IAppGlobalConfig } from 'projects/ng-core/interfaces';
 
 export namespace APP_STATE_TOKEN {
   export const GLOBAL_CONFIG = new StateToken<IAppGlobalConfig>(

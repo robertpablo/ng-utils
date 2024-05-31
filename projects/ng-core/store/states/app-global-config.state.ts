@@ -1,11 +1,11 @@
 import { HttpClient } from '@angular/common/http';
 import { Inject, Injectable, Optional } from '@angular/core';
 import { Action, State, StateContext, Store } from '@ngxs/store';
-import { AppStoreActions } from '../actions';
-import { IAppGlobalConfig, IServerConfig, initialState } from '../interfaces';
 import { catchError, tap, throwError } from 'rxjs';
-import { CoreConfig } from '../interfaces/core-config';
 import { APP_STATE_TOKEN, CORE_CONFIG } from '../tokens';
+import { initialState } from '../model';
+import { CoreConfig, IAppGlobalConfig, IServerConfig } from 'projects/ng-core/interfaces';
+import { AppStoreActions } from '../actions';
 
 @State({
   name: APP_STATE_TOKEN.GLOBAL_CONFIG,

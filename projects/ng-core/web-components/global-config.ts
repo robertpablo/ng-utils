@@ -1,3 +1,5 @@
+import { eventBus } from '../event-bus';
+
 class GlobalConfig extends HTMLElement {
   private config: any = {};
 
@@ -6,14 +8,14 @@ class GlobalConfig extends HTMLElement {
   }
 
   connectedCallback() {
-    window.addEventListener(
+    eventBus.on(
       'updateGlobalConfig',
       this.updateConfig.bind(this) as EventListener
     );
   }
 
   disconnectedCallback() {
-    window.removeEventListener(
+    eventBus.off(
       'updateGlobalConfig',
       this.updateConfig.bind(this) as EventListener
     );
@@ -21,16 +23,12 @@ class GlobalConfig extends HTMLElement {
 
   updateConfig(event: CustomEvent) {
     this.config = event.detail;
-    this.dispatchEvent(
-      new CustomEvent('configUpdated', { detail: this.config })
-    );
+    eventBus.emit('configUpdated', this.config);
   }
 
   setConfig(config: any) {
     this.config = config;
-    window.dispatchEvent(
-      new CustomEvent('updateGlobalConfig', { detail: config })
-    );
+    eventBus.emit('updateGlobalConfig', config);
   }
 
   getConfig() {
