@@ -1,0 +1,23 @@
+<button
+  [title]="propTitle || ''"
+  [class]="styleClass"
+  *ngIf="variant == variants.NORMAL"
+  [type]="buttonType"
+  color="color"
+  [disabled]="disabled"
+  (click)="handleClick($event)"
+>
+  <span *ngIf="icon"> </span>
+  {{ label }}
+</button>
+
+<button
+  [title]="propTitle || ''"
+  *ngIf="variant == variants.ICON"
+  [type]="buttonType"
+  color="color"
+  [disabled]="disabled"
+  (click)="handleClick($event)"
+>
+  <span *ngIf="icon" [class]="['feather', 'icon-' + icon]"></span>
+</button>
