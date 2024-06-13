@@ -2,6 +2,7 @@ import { Directive, OnInit, Renderer2, Input, ElementRef } from '@angular/core';
 
 @Directive({
   selector: '[resizeGridColumn]',
+  standalone: true,
 })
 export class ResizeColumnDirective implements OnInit {
   @Input('resizeGridColumn') resizable: boolean = false;

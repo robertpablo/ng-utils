@@ -5,6 +5,7 @@ const DATE_FORMAT = 'DD/MM/YYYY';
 
 @Pipe({
   name: 'dateFormat',
+  standalone: true,
 })
 export class DateFormatPipe implements PipeTransform {
   transform(value: any, defaultMsg: string = '', format: string = ''): any {
