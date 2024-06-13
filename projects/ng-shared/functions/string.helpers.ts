@@ -1,13 +1,33 @@
-export const formatBytesString = (bytes: number, decimals?: number) => {
-  /*if (bytes < 1024) return bytes + " Bytes";
-	else if (bytes < 1048576) return (bytes / 1024).toFixed(0) + " KB";
-	else if (bytes < 1073741824) return (bytes / 1048576).toFixed(2) + " MB";
-	else return (bytes / 1073741824).toFixed(1) + " GB";*/
+import moment from 'moment';
 
-  if (bytes == 0) return '0 Bytes';
-  const k = 1024,
-    dm = decimals || 2,
-    sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'],
-    i = Math.floor(Math.log(bytes) / Math.log(k));
-  return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i];
+export const arrayToString = (arr: any): string => {
+  let str = '';
+  if (arr != null) {
+    arr.forEach((i: any, index: any) => {
+      str += i;
+      if (index != arr.length - 1) {
+        str += ',';
+      }
+    });
+  }
+  return str;
+};
+
+export const isConstructor = (f: any) => {
+  try {
+    Reflect.construct(String, [], f);
+  } catch (e) {
+    return false;
+  }
+  return true;
+};
+
+export const isValidObject = (obj: any) => {
+  return (
+    typeof obj === 'object' &&
+    obj &&
+    !Array.isArray(obj) &&
+    !moment.isMoment(obj) &&
+    isConstructor(obj.constructor)
+  );
 };

@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { TOOLTIP_POSITION, VARIANTS } from 'projects/ng-shared/enum';
+import { VARIANTS, TOOLTIP_POSITION } from '@ropabajo/shared/enum';
 
 @Component({
   selector: 'rpbj-base-button',
@@ -36,7 +36,7 @@ export class RpbjBaseButtonComponent implements OnInit {
   }
 
   handleClick(e: any) {
-    if (this.disabled) return false;
+    if (this.disabled) return;
     this.onClickEvent.emit(e);
   }
 }

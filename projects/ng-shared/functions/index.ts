@@ -1,1 +1,1 @@
-export { formatBytesString } from './public-api';
+export * from './public-api';

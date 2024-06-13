@@ -1,4 +1,5 @@
-export * from './filter/filter.component';
-export * from './page-wrapper/page-wrapper.component';
+export * from './buttons/index';
+export * from './filter/index';
+export * from './page-wrapper/index';
 export * from './page-header.component';
-export * from './grids/data-grid';
+

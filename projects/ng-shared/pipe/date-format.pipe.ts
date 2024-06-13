@@ -9,6 +9,6 @@ const DATE_FORMAT = 'DD/MM/YYYY';
 export class DateFormatPipe implements PipeTransform {
   transform(value: any, defaultMsg: string = '', format: string = ''): any {
     if (!value) return defaultMsg !== '' ? defaultMsg : '-';
-    return moment(value).format(format ? format : DATE_FORMAT);
+    return moment(value).format(format || DATE_FORMAT);
   }
 }

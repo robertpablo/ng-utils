@@ -27,7 +27,7 @@ import { PageHeaderComponent, TableOfContents } from '../page-header.component';
   ],
   templateUrl: './page-wrapper.component.html',
 })
-export class RpbjPageWrapper implements AfterViewInit {
+export class RpbjPageWrapperComponent implements AfterViewInit {
   @Input() pageTitle!: string;
 
   @ContentChildren(PageHeaderComponent)

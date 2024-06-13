@@ -8,4 +8,4 @@ import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
   imports: [CommonModule, NgbAccordionModule],
   templateUrl: './filter.component.html',
 })
-export class RpbjFilter {}
+export class RpbjFilterComponent {}

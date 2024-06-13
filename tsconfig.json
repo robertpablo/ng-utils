@@ -11,12 +11,14 @@
     "noFallthroughCasesInSwitch": true,
     "skipLibCheck": true,
     "paths": {
-      "ng-core": [
-        "./dist/ng-core"
-      ],
-      "ng-shared": [
-        "./dist/ng-shared"
-      ]
+      "@ropabajo/core": ["./dist/ng-core"],
+      "@ropabajo/shared": ["./dist/ng-shared"],
+      "@ropabajo/shared/components": ["./dist/ng-shared/components"],
+      "@ropabajo/shared/directives": ["./dist/ng-shared/directives"],
+      "@ropabajo/shared/enum": ["./dist/ng-shared/enum"],
+      "@ropabajo/shared/functions": ["./dist/ng-shared/functions"],
+      "@ropabajo/shared/interfaces": ["./dist/ng-shared/interfaces"],
+      "@ropabajo/shared/pipe": ["./dist/ng-shared/pipe"]
     },
     "esModuleInterop": true,
     "sourceMap": true,
@@ -27,10 +29,7 @@
     "target": "ES2022",
     "module": "ES2022",
     "useDefineForClassFields": false,
-    "lib": [
-      "ES2022",
-      "dom"
-    ]
+    "lib": ["ES2022", "dom"]
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
