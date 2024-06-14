@@ -128,15 +128,15 @@ export class RpbjDataGridComponent
   formNewModel: any = undefined;
   @Input() source!: IDataGridSource<any>;
   @Input() definition: IDataGridDefinition = { columns: [], editable: false };
-  @Input() serverError?: string | any = null;
+  @Input() serverError?: any = undefined;
   @Input() pageSizeOptions = [10, 25, 50, 100];
+  @Input() emptyRowsMsg: string = 'No se encontraron resultados';
 
   isOpenNew: boolean = false;
   editWorkData: any = {};
   expandableState: any = {};
   columnResize: boolean = false;
   customHeadersTemplates: any = {};
-  //constructor(private alertService: AlertService) { }
 
   ngOnInit() {
     this.buildLocalDataSource();

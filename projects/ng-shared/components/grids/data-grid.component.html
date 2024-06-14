@@ -6,7 +6,9 @@
   </ng-container>
 
   <tbody>
-    <ng-container>
+    <ng-container
+      *ngIf="source.items && source.items.length > 0; else emptyTemplate"
+    >
       <ng-template
         *ngTemplateOutlet="
           tableBodyContentTemplate;
@@ -16,6 +18,19 @@
     </ng-container>
   </tbody>
 </table>
+
+<ng-template #emptyTemplate>
+  <ng-container>
+    <ng-template
+      *ngTemplateOutlet="
+        emptyRowsTemplate;
+        context: {
+          totalRows: source.total
+        }
+      "
+    ></ng-template>
+  </ng-container>
+</ng-template>
 
 <ng-container>
   <ng-template
@@ -32,11 +47,7 @@
     >
       <td *ngIf="showRowIndex">{{ this.calcNroRow(rowIndex) }}</td>
       <ng-container *ngFor="let col of columnsToDisplay; let colIndex = index">
-        <td
-          [attr.data-title]="col.label"
-          class="data-grid-td"
-          [ngStyle]="col.style"
-        >
+        <td [attr.data-title]="col.label" [ngStyle]="col.style">
           <rpbj-data-grid-column-body
             [editableOptions]="definition.editableOptions"
             [isEditableGrid]="isEditableGrid()"
@@ -73,8 +84,9 @@
         <th
           [resizeGridColumn]="columnResize"
           [ngClass]="{ 'text-right': col.buttons }"
-          class="data-grid-th {{ col.thClass }}"
+          class="{{ col.thClass }}"
           [ngStyle]="col.style"
+          scope="col"
         >
           <rpbj-data-grid-column-head
             [template]="customHeadersTemplates[headerIndex]"
@@ -110,4 +122,13 @@
     [pageLength]="datasource.items.length"
   >
   </rpbj-data-grid-paginator>
+</ng-template>
+
+<ng-template #emptyRowsTemplate let-totalRows="totalRows">
+  <div
+    class="empty-rows mat-typography"
+    *ngIf="totalRows == 0 && !loading && !serverError"
+  >
+    {{ emptyRowsMsg }}
+  </div>
 </ng-template>
