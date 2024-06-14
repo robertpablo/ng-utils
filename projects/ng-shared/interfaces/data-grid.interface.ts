@@ -75,3 +75,10 @@ export interface IDataGridEvent {
   orderDir: string;
   skip?: number;
 }
+
+export interface IDataGridElement<T> {
+  loading: boolean;
+  definition: IDataGridDefinition;
+  source: IDataGridSource<T>;
+  error: any;
+}

@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { IDataGridColumnDefinition } from '@ropabajo/shared/interfaces';
 
@@ -6,6 +7,7 @@ import { IDataGridColumnDefinition } from '@ropabajo/shared/interfaces';
   templateUrl: './data-grid-column-head.component.html',
   styleUrls: ['./data-grid-column-head.component.scss'],
   standalone: true,
+  imports: [CommonModule],
 })
 export class RpbjDataGridHeadColumnComponent {
   @Input() orderField: string = '';
